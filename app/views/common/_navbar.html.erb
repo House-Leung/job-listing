@@ -18,11 +18,12 @@
                 Hi!,<%= current_user.email %>
                 <b class="caret"></b>
               </a>
-              <ul class="dropdown-meun">
-                <li> <%= link_to("登出", destroy_user_seesion_path, method: :delete) %> </li>
+              <ul class="dropdown-menu">
+                <li> <%= link_to("Admin Panel", admin_jobs_path) %> </li>
+                <li> <%= link_to("登出", destroy_user_session_path, method: :delete) %> </li>
               </ul>
             </li>
-          <% end %>          
+          <% end %>
         </li>
       </ul>
     </div>
