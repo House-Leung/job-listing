@@ -1,3 +1,5 @@
+<h1> Admin Panel </h1>
+
 <div class="pull-right">
   <%= link_to("Add a job", new_job_path, :class => "btn btn-primary")%>
 </div>
@@ -6,7 +8,8 @@
   <% @jobs.each do |job| %>
   <tr>
     <td>
-      <%= link_to(job.title, job_path(job)) %>
+      <%= render_job_status(job) %>
+      <%= link_to(job.title, admin_job_path(job)) %>
     </td>
     <td>
       <%= link_to("Edit", edit_job_path(job)) %> |
