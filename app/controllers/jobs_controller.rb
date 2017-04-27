@@ -10,6 +10,9 @@ class JobsController < ApplicationController
     else
       Job.published.recent
     end
+
+    @q = Job.ransack(params[:q])
+    @jobs = @q.result(distinct: true)
   end
 
   def show
