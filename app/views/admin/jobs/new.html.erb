@@ -1,13 +1,26 @@
-<h1> Add a job </h1>
+<h1> 极限 ✖️ 发布 </h1>
 
-<%= simple_form_for [:admin,@job] do |f| %>
+<%= simple_form_for @job do |f| %>
 
 <%= f.input :title %>
 <%= f.input :description %>
-<%= f.input :wage_lower_bound, :label => "薪资下限" %>
-<%= f.input :wage_upper_bound, :label => "薪资上限" %>
+<%= f.input :wage_lower_bound, :label => "费用下限" %>
+<%= f.input :wage_upper_bound, :label => "费用上限" %>
+
+<% if @job.xsports_name? %>
+<%= f.input :xsports_name, :label => "运动类型", :collection => ["跑酷", "冲浪", "攀岩", "滑板", "其他"], :checked => @job.xsports_name %>
+<% else %>
+<%= f.input :xsports_name, :label => "运动类型", :collection => ["跑酷", "冲浪", "攀岩", "滑板", "其他"] %>
+<% end %>
+
+<% if @job.location? %>
+  <%= f.input :location, :label => "活动地点", :collection => ["北京", "上海", "深圳", "广州", "广西阳朔", "杭州", "香港", "青岛", "海南", "海外"] , :checked => @job.location %>
+<% else %>
+  <%= f.input :location, :label => "活动地点", :collection => ["北京", "上海", "深圳", "广州", "广西阳朔", "杭州", "香港", "青岛", "海南", "海外"] %>
+<% end %>
+
 <%= f.input :contact_email %>
 <%= f.input :is_hidden %>
 
-  <%= f.submit "Submit" %>
+<%= f.submit "Submit" %>
 <% end %>
