@@ -1,7 +1,5 @@
-<h1> Admin Panel </h1>
-
-<div class="pull-right">
-  <%= link_to("Add a job", new_job_path, :class => "btn btn-primary")%>
+ <div class="pull-right">
+  <%= link_to("发布活动", new_admin_job_path, :class => "btn btn-primary " )%>
 </div>
 
 <table class="table table-boldered table-striped custab">
@@ -26,7 +24,7 @@
     <td> <%= job.wage_lower_bound %> </td>
     <td> <%= job.wage_upper_bound %> </td>
     <td>
-      <%= link_to("Edit", edit_admin_job_path(job), :class => "btn btn-xs btn-info") %> 
+      <%= link_to("Edit", edit_admin_job_path(job), :class => "btn btn-xs btn-info") %>
       <%= link_to("Destroy", admin_job_path(job), :method => :delete, :class => "btn btn-xs btn-danger" ,:data => { :confirm => "Are you sure?" }) %>
 
       <% if job.is_hidden %>
