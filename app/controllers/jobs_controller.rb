@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
+  before_action :search_action
 
   def index
     @jobs =  case params[:order]
@@ -61,5 +62,10 @@ class JobsController < ApplicationController
 
   def job_params
     params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden, :xsports_name, :location,)
+  end
+
+  def search_action
+    @q = Job.ransack(params[:q])
+    @jobs = @q.result(distinct: true)
   end
 end
