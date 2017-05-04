@@ -37,24 +37,24 @@
  }
 
  .navbar-default .navbar-brand {
-     color: #EF6C00;
+     color: #efefef;
      padding: 10px 15px;
      line-height: 30px;
  }
 
  .navbar-default .navbar-brand:hover,
  .navbar-default .navbar-brand:focus {
-     color: #FF6F00;
+     color: #b3af9a;
      background-color: transparent;
  }
 
  .navbar-default .navbar-nav > li > a {
-     color: #EF6C00;
+     color: #efefef;
  }
 
  .navbar-default .navbar-nav > li > a:hover,
  .navbar-default .navbar-nav > li > a:focus {
-     color: #FF6F00;
+     color: #b3af9a;
      background-color: transparent;
  }
 
@@ -68,14 +68,14 @@
  .navbar-default .navbar-nav > .open > a,
  .navbar-default .navbar-nav > .open > a:focus,
  .navbar-default .navbar-nav > .open > a:hover {
-     background-color: #FFE0B2;
+     background-color: #efefef;
      color: #212121;
  }
 
- .search-id {
-width: 200px;
-padding-top: 7px;
-}
+ #search-id {
+  width: 200px;
+  padding-top: 7px;
+  }
 
  //---------Box---------
 
@@ -87,7 +87,7 @@ padding-top: 7px;
      margin-top: -20px;
 
      .box-inner {
-         background-color: rgba(250, 250, 250, 0.48);
+        //  background-color: rgba(128, 128, 105, 0.48);
          padding-bottom: 5px;
          margin-top: 150px;
          margin-bottom: 150px;
@@ -95,16 +95,18 @@ padding-top: 7px;
      }
 
      .title {
+         color: #efefef;
+         font-size: 48px;
          text-align: left;
          margin-bottom: 80px;
      }
 
      .slogan {
-         color: #222;
+         color: #efefef;
          margin-top: 10px;
          margin-bottom: 50px;
          text-align: left;
-         font-size: 25px;
+         font-size: 18px;
          top: 12px;
      }
 
@@ -155,6 +157,65 @@ padding-top: 7px;
  .lead {
      font-size: 18px;
      font-weight: 400;
+ }
+
+ //---------Bottom---------
+
+ .bottom {
+     background-image: url("bottom-c.jpg");
+     background-repeat: no-repeat;
+     background-size: 100% ;
+     margin-bottom: -85px;
+     margin-top: -20px;
+
+     .bottom-inner {
+        //  background-color: rgba(128, 128, 105, 0.48);
+         padding-bottom: 5px;
+         margin-top: 150px;
+         margin-bottom: 150px;
+         //margin-left: 20px;  //外边框距离设置
+     }
+
+     .title {
+         color: #efefef;
+         font-size: 48px;
+         text-align: left;
+         margin-bottom: 80px;
+     }
+
+     .slogan {
+         color: #efefef;
+         margin-top: 10px;
+         margin-bottom: 50px;
+         text-align: left;
+         font-size: 32px;
+         top: 12px;
+     }
+
+     .lead {
+         margin-bottom: 60px;
+         text-align: center;
+         color: white;
+     }
+ }
+
+ //------bottom boutton----
+
+ .btn-bottom {
+    color: #fff;
+    background-color: transparent;
+    border-color: #efefef;
+    > a:hover {
+      background-color: #d9534f;
+      border-color: #d43f3a;
+    }
+ }
+
+ .btn-bottom:hover,
+ .btn-bottom:focus {
+     color: #efefef;
+     background-color: #d43f3a;
+     border-color: #d43f3a;
  }
 
  //---------Footer---------
