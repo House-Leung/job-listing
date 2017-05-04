@@ -72,7 +72,7 @@ class JobsController < ApplicationController
 
 
   def search_criteria(query_string)
-    { :title_cont => query_string }
+    { :title_or_xsports_name_or_location_cont => query_string }
   end
 
 
