@@ -96,14 +96,14 @@
 
      .title {
          color: #efefef;
-         font-size: 48px;
+         font-size: 64px;
          text-align: left;
          margin-bottom: 80px;
      }
 
      .slogan {
          color: #efefef;
-         margin-top: 10px;
+         margin-top: -60px; // 10px of version mini
          margin-bottom: 50px;
          text-align: left;
          font-size: 18px;
@@ -145,7 +145,7 @@
  }
 
  .section-heading-spacer {
-     float: left;
+     float: right;
      width: 200px;
      border-top: 3px solid #e7e7e7;
  }
@@ -162,7 +162,7 @@
  //---------Bottom---------
 
  .bottom {
-     background-image: url("bottom-c.jpg");
+     background-image: url("bottom-c1.jpg");
      background-repeat: no-repeat;
      background-size: 100% ;
      margin-bottom: -85px;
